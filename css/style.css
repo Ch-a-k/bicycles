@@ -446,7 +446,6 @@ img {
 }
 
 footer .container {
-    height: 250px;
     background: #f7f7f7;
     margin: auto;
 }
@@ -455,6 +454,7 @@ footer .container {
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    padding: 100px 250px 100px 100px;
 }
 
 .bold {
