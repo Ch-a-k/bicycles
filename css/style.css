@@ -782,6 +782,9 @@ footer .container {
     .enter-email{
         margin-bottom: 100px;
     }
+    .saddle img {
+        margin-top: 150px;
+    }
     .discover {
         height: 150px;
     }
@@ -814,6 +817,12 @@ footer .container {
     }
     .col-1f div {
         padding: 0;
+    }
+    main {
+        margin-bottom: 100px;
+    }
+    .container .footer-cols {
+        padding: 30px 0;
     }
 }
 
