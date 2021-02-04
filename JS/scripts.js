@@ -1,4 +1,6 @@
 $(document).ready(function () {
+// FIRST SWIPER
+
   var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     loop: true,
@@ -39,8 +41,17 @@ $(document).ready(function () {
     },
   });
 
+  //  Mobile menu
+
   $(".header").on("click", ".menu-button", function () {
     $(".header").toggleClass('menu-opened');
   })
+
+  // Anchor links
+
+  $( ".js-anchor" ).click(function( event ) {
+    event.preventDefault();
+    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 1000);
+});
 
 })

@@ -68,6 +68,7 @@ img {
 }
 
 .wrapper {
+    max-width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -80,7 +81,7 @@ img {
 
 .container {
     display: block;
-    max-width: 1600px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -166,7 +167,7 @@ img {
 .col-33 {
     width: 33.3%;
     flex-grow: 1;
-    min-width: 400px;
+
 }
 
 .col-66 img {
@@ -186,9 +187,13 @@ img {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
-    max-width: 1600px;
+    max-width: 100%;
     margin: auto;
     background: #f7f7f7;
+}
+.review-container {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .col-1f img {
@@ -383,7 +388,7 @@ img {
     text-align: center;
     background: #282f35;
     height: 200px;
-    max-width: 1600px;
+    max-width: 100%;
     max-height: 200px;
     display: flex;
     justify-content: center;
@@ -505,6 +510,110 @@ footer .container {
 
 /* MEDIA 480 535 580 768 980 1200 */
 
+@media (max-width: 420px) {
+   .container {
+       max-width: 100%;
+       overflow: hidden;
+   }
+
+    div .swiper-button-next:after, .swiper-button-prev:after {
+        height: 5px;
+    }
+    .col-inner .text-block {
+        padding: 5px 0 15px;
+       min-height: auto;
+    }
+    .col-33 {
+        min-width: 33.3%;
+        max-width: 33.3%;
+        height: auto;
+    }
+    .col-inner {
+        min-width: auto;
+        max-width: auto;
+    }
+    .review-container {
+    overflow: hidden;
+    }
+    .saddle div {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .container .footer-cols {
+        padding: 0;
+    }
+    .adress p {
+        font-size: 8px;
+    }
+    .footer-cols div p {
+        font-size: 10px;
+        margin: 0;
+        padding: 5px 0;
+    }
+    .adress {
+        margin: 0;
+        max-width: 33.3%;
+    }
+    .yebo {
+        display: block;
+    }
+    .saddle {
+        height: 350px;
+    }
+    .saddle .email {
+    width: 150px;
+    font-size: 15px;
+    padding: 0;
+    text-align: center;
+    }
+    .saddle p {
+        margin: 13px;
+    }
+    .saddle .button {
+        width: 50px;
+    }
+    .discover {
+        height: 150px;
+    }
+    .discover span {
+        font-size: 10px;
+        padding: 15px;
+    }
+    .text-block p {
+        font-size: 10px;
+        line-height: normal;
+        padding: 5px 15px 10px;
+    }
+    .text-block h4 {
+        font-size: 8px;
+        padding: 0;
+        text-align: center;
+    }
+    .text-block img {
+        padding: 5px 0 10px;
+    }
+    .work2 {
+        height: 300px;
+    }
+    .three-cols {
+        max-width: 33.3%;
+        overflow: hidden;
+    }
+    .triangle::before {
+        left: 60%;
+        border-width: 10px;
+    }
+    .col-1f .p {
+        padding: 0 0 15px;
+    }
+    .col-1f h4 {
+        font-size: 13px;
+    }
+    .small-swiper {
+        padding-bottom: 45px;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 0;
@@ -540,8 +649,10 @@ footer .container {
         top: 15px;
         left: 0;
         background: #6dc196;
+        opacity: 1;
     }
-    .menu-button:before, .menu-button:after {
+    .menu-button:before,
+    .menu-button:after {
         content: "";
         width: 100%;
         height: 2px;
@@ -549,6 +660,7 @@ footer .container {
         top: 0px;
         left: 0;
         background: #6dc196;
+        transition: .2s;
     }
     .menu-button:after {
         top: auto;
@@ -585,12 +697,243 @@ footer .container {
     .header li:not(:last-child):after {
         display: none;
     }
+    .menu-opened .menu-button span {
+        opacity: 0%;
+    }
+    .menu-opened .menu-button::before{
+        transform: rotate(-45deg);
+        top: 30px;
+    }
+    .menu-opened .menu-button::after{
+        transform: rotate(45deg);
+    }
+    .col-1f img {
+        padding-top: 25px;
+    }
+    div p {
+        padding: 30px 40px;
+    }
+    .mobile-logo img {
+        width: 50px;
+        margin-top: 15px;
+    }
+    .insert1 .col-1f div{
+        padding: 0;
+    }
+    .container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+     div .swiper-button-next:after, .swiper-button-prev:after {
+         height: 5px;
+     }
+     .col-inner .text-block {
+         padding: 5px 0 15px;
+        min-height: auto;
+     }
+     .col-33 {
+         min-width: 33.3%;
+         max-width: 33.3%;
+         height: auto;
+     }
+     .col-inner {
+         min-width: auto;
+         max-width: auto;
+     }
+     .review-container {
+     overflow: hidden;
+     }
+     .saddle div {
+         min-width: 100%;
+         max-width: 100%;
+     }
+     .container .footer-cols {
+         padding: 0;
+     }
+     .adress p {
+         font-size: 8px;
+     }
+     .footer-cols div p {
+         font-size: 10px;
+         margin: 0;
+         padding: 5px 0;
+     }
+     .adress {
+         margin: 0;
+         max-width: 33.3%;
+     }
+     .yebo {
+         display: block;
+     }
+     .saddle {
+         height: 350px;
+     }
+     .saddle .email {
+     width: 350px;
+     font-size: 20px;
+     padding: 0;
+     text-align: center;
+     }
+     .saddle p {
+         margin: 30px;
+     }
+     .saddle .button {
+         width: 50px;
+     }
+     .discover {
+         height: 150px;
+     }
+     .discover span {
+         font-size: 10px;
+         padding: 15px;
+     }
+     .text-block p {
+         font-size: 10px;
+         line-height: normal;
+         padding: 5px 15px 10px;
+     }
+     .text-block h4 {
+         font-size: 8px;
+         padding: 0;
+         text-align: center;
+     }
+     .text-block img {
+         padding: 5px 0 10px;
+     }
+     .three-cols {
+         max-width: 33.3%;
+         overflow: hidden;
+     }
+     .col-1f .p {
+         padding-bottom: 40px;
+     }
+     .second-slider span {
+         padding-bottom: 0;
+     }
+     .col-1f div {
+         padding: 0;
+     }
 }
 
-@media (max-width: 580px) {}
 
-@media (max-width: 580px) {}
+@media (max-width: 980px) {
+    div p {
+        padding: 30px 40px;
+    }
 
-@media (max-width: 580px) {}
+    .insert1 .col-1f div{
+        padding: 0;
+    }
+    .container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+     div .swiper-button-next:after, .swiper-button-prev:after {
+         height: 5px;
+     }
+     .col-inner .text-block {
+         padding: 5px 0 15px;
+        min-height: auto;
+     }
+     .col-33 {
+         min-width: 33.3%;
+         max-width: 33.3%;
+         height: auto;
+     }
+     .col-inner {
+         min-width: auto;
+         max-width: auto;
+     }
+     .review-container {
+     overflow: hidden;
+     }
+     .saddle div {
+         min-width: 100%;
+         max-width: 100%;
+     }
+     .container .footer-cols {
+         padding: 0;
+     }
+     .adress p {
+         font-size: 8px;
+     }
+     .footer-cols div p {
+         font-size: 13px;
+         margin: 0;
+         padding: 5px 0;
+     }
+     .footer-cols {
+         margin: 40px 0;
+     }
+     .adress {
+         margin: 0;
+         max-width: 33.3%;
+     }
+     .yebo {
+         display: block;
+     }
+     .saddle {
+         height: 350px;
+     }
+     .saddle .email {
+     width: 350px;
+     font-size: 20px;
+     padding: 0;
+     text-align: center;
+     }
+     .saddle p {
+         margin: 30px;
+     }
+     .saddle .button {
+         width: 50px;
+     }
+     .discover {
+         height: 150px;
+     }
+     .discover span {
+         font-size: 10px;
+         padding: 15px;
+     }
+     .text-block p {
+         font-size: 15px;
+         padding: 5px 15px 10px;
+     }
+     .three-cols {
+         max-width: 33.3%;
+         overflow: hidden;
+     }
+     .col-1f .p {
+         padding-bottom: 40px;
+     }
 
-@media (max-width: 580px) {}
+     .second-slider span {
+         padding-bottom: 0;
+     }
+     .col-1f div {
+         padding: 0;
+     }
+     .review-container img{
+        padding-top: 32px;
+    }
+    .col-1f img {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+    section {
+        max-width: 100%;
+    }
+    .row {
+        max-width: 100%;
+    }
+    .review-container {
+        overflow: hidden;
+        }
+    .col-33 {
+        max-width: 33.3%;
+    }
+}
