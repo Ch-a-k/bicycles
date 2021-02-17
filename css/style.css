@@ -81,7 +81,7 @@ img {
 
 .container {
     display: block;
-    max-width: 100%;
+    max-width: 1470px;
     margin: 0 auto;
 }
 
@@ -198,7 +198,10 @@ img {
 }
 
 .col-1f img {
-    padding: 115px 0 32px;
+    padding: 115px 0 35px;
+}
+.col-1f {
+    height: 100%;
 }
 
 .col-1f div {
@@ -437,6 +440,7 @@ img {
     margin-left: 8px;
     background: #64c29e;
     border: none;
+    color: #fff;
 }
 
 .enter-email {
@@ -508,111 +512,12 @@ footer .container {
     color: #64c29e;
     font-size: 30px;
 }
+/* .col-1f img {
+    width: 35px;
+    height: 35px;
+} */
 
 /* MEDIA 480 535 580 768 980 1200 */
-
-@media (max-width: 420px) {
-    .container {
-        max-width: 100%;
-        overflow: hidden;
-    }
-    div .swiper-button-next:after, .swiper-button-prev:after {
-        height: 5px;
-    }
-    .col-inner .text-block {
-        padding: 5px 0 15px;
-        min-height: auto;
-    }
-    .col-33 {
-        min-width: 33.3%;
-        max-width: 33.3%;
-        height: auto;
-    }
-    .col-inner {
-        min-width: auto;
-        max-width: auto;
-    }
-    .review-container {
-        overflow: hidden;
-    }
-    .saddle div {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .container .footer-cols {
-        padding: 0;
-    }
-    .adress p {
-        font-size: 8px;
-    }
-    .footer-cols div p {
-        font-size: 10px;
-        margin: 0;
-        padding: 5px 0;
-    }
-    .adress {
-        margin: 0;
-        max-width: 33.3%;
-    }
-    .yebo {
-        display: block;
-    }
-    .saddle {
-        height: 350px;
-    }
-    .saddle .email {
-        width: 150px;
-        font-size: 15px;
-        padding: 0;
-        text-align: center;
-    }
-    .saddle p {
-        margin: 13px;
-    }
-    .saddle .button {
-        width: 50px;
-    }
-    .discover {
-        height: 150px;
-    }
-    .discover span {
-        font-size: 10px;
-        padding: 15px;
-    }
-    .text-block p {
-        font-size: 10px;
-        line-height: normal;
-        padding: 5px 15px 10px;
-    }
-    .text-block h4 {
-        font-size: 8px;
-        padding: 0;
-        text-align: center;
-    }
-    .text-block img {
-        padding: 5px 0 10px;
-    }
-    .work2 {
-        height: 300px;
-    }
-    .three-cols {
-        max-width: 33.3%;
-        overflow: hidden;
-    }
-    .triangle::before {
-        left: 60%;
-        border-width: 10px;
-    }
-    .col-1f .p {
-        padding: 0 0 15px;
-    }
-    .col-1f h4 {
-        font-size: 13px;
-    }
-    .small-swiper {
-        padding-bottom: 45px;
-    }
-}
 
 @media (max-width: 768px) {
     .header {
@@ -708,9 +613,20 @@ footer .container {
     }
     .col-1f img {
         padding-top: 25px;
+        max-width: 41px;
+    }
+    .col-1f h2 {
+        font-size: 8px;
+        padding: 0;
+        text-align: center;
+    }
+    .col-66 img {
+        max-width: none;
     }
     div p {
-        padding: 30px 40px;
+        padding: 15px 20px;
+        font-size: 10px;
+        line-height: normal;
     }
     .mobile-logo img {
         width: 50px;
@@ -731,8 +647,6 @@ footer .container {
         min-height: auto;
     }
     .col-33 {
-        min-width: 33.3%;
-        max-width: 33.3%;
         height: auto;
     }
     .col-inner {
@@ -741,6 +655,7 @@ footer .container {
     }
     .review-container {
         overflow: hidden;
+        height: 250px;
     }
     .saddle div {
         min-width: 100%;
@@ -806,7 +721,7 @@ footer .container {
         padding: 5px 0 10px;
     }
     .three-cols {
-        max-width: 33.3%;
+        width: 100%;
         overflow: hidden;
     }
     .col-1f .p {
@@ -824,9 +739,58 @@ footer .container {
     .container .footer-cols {
         padding: 30px 0;
     }
+    .work2 img {
+        max-width: none;
+        height: 100%;
+        left: 60%;
+    }
+    .work2 .triangle img {
+        width: 100%;
+    }
+    .col-33 {
+        width: 100%
+    }
+    .col-33  .triangle image-rendering: ;{
+        width: 100%;
+    }
+    .shop .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .shop .col-33 .row {
+        display: flex;
+        flex-direction: row;
+    }
+    .shop .col-33 {
+        width: 100%;
+        height: 530px;
+    }
+    .three-cols {
+      display: flex;
+      flex-direction: column;
+      position: none;
+      width: 100%;
+      position: unset;
+    }
+    .col-inner .image-block {
+        position: unset;
+    }
+    .work2 .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .work2 img:not(.icon) {
+        min-width: 100%;
+        min-height: 100%;
+        height: 350px;
+    }
+    .image-block {
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 
-@media (min-width: 768px max-width: 980px) {
+@media (min-width: 768px) and (max-width: 980px) {
     div p {
         padding: 30px 40px;
     }
@@ -903,17 +867,26 @@ footer .container {
         font-size: 10px;
         padding: 15px;
     }
-    .text-block p {
-        font-size: 15px;
-        padding: 5px 15px 10px;
-    }
     .three-cols {
         max-width: 33.3%;
         overflow: hidden;
     }
     .col-1f .p {
-        padding-bottom: 40px;
+        padding-bottom: 30px;
     }
+    .col-1f img {
+        padding-top: 25px;
+        max-width: 41px;
+    }
+    .col-1f h2 {
+        font-size: 15px;
+        padding: 0;
+        text-align: center;
+    }
+    div p {
+        padding: 30px 40px;
+    }
+    
     .second-slider span {
         padding-bottom: 0;
     }
@@ -926,6 +899,11 @@ footer .container {
     .col-1f img {
         padding-top: 30px;
     }
+    .image-block img:not(.icon) {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: none;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -935,13 +913,7 @@ footer .container {
     section {
         max-width: 100%;
     }
-    .row {
-        max-width: 100%;
-    }
     .review-container {
         overflow: hidden;
-    }
-    .col-33 {
-        max-width: 33.3%;
     }
 }
